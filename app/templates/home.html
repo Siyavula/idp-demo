@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Home{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  {% if g.user %}
+    <p>Welcome {{ g.user.first_name }}!</p>
+
+    <p>Keycloak user data:</p>
+    <ul>
+      {% for field, value in g.user.items() %}
+        <li>{{ field }}: {{ value }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Welcome!</p>
+    <p>Get started by logging in or registering</p>
+    <ul>
+      <li>
+        <a href="{{ url_for('auth.register') }}">Register</a>
+      </li>
+      <li>
+        <a href="{{ url_for('auth.login') }}">Log In</a>
+      </li>
+    </ul>
+  {% endif %}
+{% endblock %}
