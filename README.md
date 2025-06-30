@@ -1,6 +1,6 @@
 # Identity Provider Demo
 
-A Flask web application demonstrating Identity Provider (IdP) integration with Keycloak for Single Sign-On (SSO) authentication.
+A Flask web application demonstrating Identity Provider (IdP) integration with Keycloak for Single Sign-On (SSO) authentication to demonstrate a secure, centralised IdP platform designed for organisations (schools, government, businesses) to manage student and teacher identities. The platform will serve as a trusted authentication and authorisation system, allowing users to seamlessly access various educational tools and services while ensuring compliance with privacy regulations and data residency laws.
 
 ⚠️ **This is a demo application with hardcoded secrets.** Do not use in production without:
 
